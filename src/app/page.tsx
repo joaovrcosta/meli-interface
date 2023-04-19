@@ -1,124 +1,150 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from "next/image";
+import Link from "next/link";
+import { Item } from "../components/Item";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <>
+      <header className="bg-[#fff159] flex flex-col justify-center items-center border-b border-gray-300">
+        <div className="max-w-[1250px]">
+          <div className="bg-[#fff159] w-[1220px] flex  items-center pt-2 pb-2 justify-between">
+            <img
+              src="./logo-pt__large_plus.png"
+              alt=""
+              className="cursor-pointer"
             />
-          </a>
+            <input
+              className="py-2 ps-5 pr-14 w-[36.25rem] mr-6 text-opacity-70 bg-white shadow shadow-bottom"
+              type="text"
+              placeholder="Buscar produtos, marcas e muito mais..."
+            />
+            <img
+              src="./D_NQ_618580-MLA52432822706_112022-OO.png"
+              alt=""
+              className="h-10 w-[340px] cursor-pointer"
+            />
+          </div>
+          <div className="max-w-[1250px] bg-[#fff159] w-[1220px] flex pt-2 pb-2  justify-between m">
+            <div className="text-black text-sm">
+              <Link href="" legacyBehavior>
+                <a href="">São Paulo 03572000</a>
+              </Link>
+            </div>
+            <div className="flex gap-5 text-sm text-black opacity-60  mr-20 font-light">
+              <select className="form-select block bg-transparent">
+                <option>Categorias</option>
+                <option>Opção 2</option>
+                <option>Opção 3</option>
+              </select>
+              <Link href="" legacyBehavior>
+                <a href="">Ofertas do dia</a>
+              </Link>
+              <Link href="" legacyBehavior>
+                <a href="">Histórico</a>
+              </Link>
+              <Link href="" legacyBehavior>
+                <a href="">Supermercado</a>
+              </Link>
+              <Link href="" legacyBehavior>
+                <a href="">Moda</a>
+              </Link>
+              <Link href="" legacyBehavior>
+                <a href="">Vender</a>
+              </Link>
+              <Link href="" legacyBehavior>
+                <a href="">Contato</a>
+              </Link>
+            </div>
+            <div className="flex gap-5 text-sm text-black font-light">
+              <Link href="" legacyBehavior>
+                <a href="">Crie a sua conta</a>
+              </Link>
+              <Link href="" legacyBehavior>
+                <a href="">Entre</a>
+              </Link>
+              <Link href="" legacyBehavior>
+                <a href="">Compras</a>
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </header>
+      <main className="flex justify-center items-center">
+        <div className="" id="carrossel"></div>
+        <div className="max-w-[1250px]">
+          <div className="pt-11 pb-6">
+            <div className="flex">
+              <h2 className="text-base tracking-widest mb-4 text-[#666]">
+                COMPRE OS PRODUTOS QUE VIU NA TV 🔥
+              </h2>
+              <a href="" className="text-[#3485f9] ml-4">
+                Ver mais
+              </a>
+            </div>
+            <section className="flex gap-3">
+              <Item
+                oldPrice="R$450,00"
+                price="R$300,00"
+                descont="40"
+                description="Fritadeira Sem Óleo Air Fryer Afn40-bft 4l 1500w Mondial "
+                image="./air-freier.png"
+                location="http://localhost:3000/product/1"
+              />
+              <Item
+                oldPrice="R$900,00"
+                price="R$760,00"
+                descont="30"
+                description="Jogo De Panelas Tramontina Turim Antiaderente 10 Peças "
+                image="./panelas.jpg"
+              />
+              <Item
+                oldPrice="R$450,00"
+                price="R$300,00"
+                descont="40"
+                description="Fritadeira Sem Óleo Air Fryer Afn40-bft 4l 1500w Mondial "
+                image="./item-1.jpg"
+              />
+              <Item
+                oldPrice="R$900,00"
+                price="R$760,00"
+                descont="30"
+                description="Jogo De Panelas Tramontina Turim Antiaderente 10 Peças "
+                image="./item-2.jpg"
+              />
+              <Item
+                oldPrice="R$450,00"
+                price="R$300,00"
+                descont="40"
+                description="Fritadeira Sem Óleo Air Fryer Afn40-bft 4l 1500w Mondial "
+                image="./air-freier.png"
+              />
+            </section>
+          </div>
+          <section>
+            <div className="flex max-w-[1250px] justify-between">
+              <section className="pt-2 pb-2 cursor-pointer">
+                <img
+                  src="./propaganda-1.jpg"
+                  alt=""
+                  className="h-[165px] w-[615px] rounded-md"
+                />
+              </section>
+              <section className="rounded-md pt-2 cursor-pointer">
+                <img
+                  src="./propaganda-2.jpg"
+                  alt=""
+                  className="h-[165px] w-[615px] rounded-md"
+                />
+              </section>
+            </div>
+          </section>
+          <section>
+            <div className="pt-5 pb-1 text-[#4a4a4a] text-base">
+              <h2>MELHORES OFERTAS COM CUPOM 💛</h2>
+            </div>
+          </section>
+        </div>
+      </main>
+    </>
+  );
 }
